@@ -1,3 +1,13 @@
+/**
+ * Welcome to Cloudflare Workers! This is your first worker.
+ *
+ * - Run `npm run dev` in your terminal to start a development server
+ * - Open a browser tab at http://localhost:8787/ to see your worker in action
+ * - Run `npm run deploy` to publish your worker
+ *
+ * Learn more at https://developers.cloudflare.com/workers/
+ */
+
 // Software: GDI-JS
 // Version: 2.3.6
 // Author: Parveen Bhadoo
@@ -14,10 +24,10 @@ const domain_for_dl = domains_for_dl[Math.floor(Math.random() * domains_for_dl.l
 const blocked_region = ['']; // add regional codes seperated by comma, eg. ['IN', 'US', 'PK']
 const blocked_asn = []; // add ASN numbers from http://www.bgplookingglass.com/list-of-autonomous-system-numbers, eg. [16509, 12345]
 const authConfig = {
-  "siteName": "Google Drive Index", // Website name
-  "client_id": "", // Client id from Google Cloud Console
-  "client_secret": "", // Client Secret from Google Cloud Console
-  "refresh_token": "", // Authorize token
+  "siteName": "course", // Website name
+  "client_id": "746239575955-c4d2o1ahg4ts6ahm3a5lh5lp9g8m15h4.apps.googleusercontent.com", // Client id from Google Cloud Console
+  "client_secret": "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", // Client Secret from Google Cloud Console
+  "refresh_token": "1//0ecN_R4WqnFdaCgYIARAAGA4SNwF-L9Ir9r6z05v5TryLG7f89pzD2Yc-y-T7adY9kCqOQDxWnoIztPlbpA1vlU2Wx-7UhB-3OwI", // Authorize token
   "service_account": false, // true if you're using Service Account instead of user account
   "service_account_json": randomserviceaccount, // don't touch this one
   "files_list_page_size": 100,
@@ -50,7 +60,7 @@ const authConfig = {
   ],
   "roots": [
     {
-      "id": "",
+      "id": "root",
       "name": "00-MUST-HAVE",
       "protect_file_link": false
   },
